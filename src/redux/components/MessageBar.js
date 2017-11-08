@@ -2,9 +2,10 @@ import React from 'react';
 
 export default class MessageBar extends React.Component {
 	render(){
+		const message = this.props.message;
 		return (
 				<div>
-					<p>Hi I am a MessageBar Component</p>
+					<h3>MessageBar Component: {message} </h3>
 				</div>
 			);
 	}

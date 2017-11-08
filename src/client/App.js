@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import MessageBar from '../redux/components/MessageBar.js';
 import FilterBar from '../redux/components/FilterBar.js';
@@ -13,10 +12,12 @@ class App extends Component {
       <div className="App">
         <MessageBar />
         <FilterBar />
-        <DataTable />
+        <DataTable data_groups = {this.props.data_groups}/>
       </div>
     );
   }
 }
+
+
 
 export default App;
