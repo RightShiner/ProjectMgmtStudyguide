@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import MessageBar from '../redux/components/MessageBar.js';
 import FilterBar from '../redux/components/FilterBar.js';
+import DataTable from '../redux/components/DataTable.js';
+
 
 
 class App extends Component {
@@ -12,6 +14,7 @@ class App extends Component {
         <p>hello world</p>
         <MessageBar />
         <FilterBar />
+        <DataTable />
       </div>
     );
   }
