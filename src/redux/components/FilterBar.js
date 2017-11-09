@@ -1,6 +1,6 @@
 import React from 'react';
-import KnowledgeAreaFilter from './KnowledgeAreaFilter.js';
-import ProcessGroupFilter from './ProcessGroupFilter.js';
+import KAFilter from './KAFilter.js';
+import PGFilter from './PGFilter.js';
 
 
 export default class FilterBar extends React.Component {
@@ -9,8 +9,8 @@ export default class FilterBar extends React.Component {
 				<div>
 					<p>Hi I am a FilterBar Component</p>
 					<ul>
-						<KnowledgeAreaFilter /> 
-						<ProcessGroupFilter  /> 
+						<KAFilter /> 
+						<PGFilter  /> 
 					</ul>
 				</div>
 			);
