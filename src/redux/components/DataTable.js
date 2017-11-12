@@ -10,9 +10,19 @@ export default class DataTable extends React.Component {
 		return (
 				<div>
 					<p>Hi I am a DataTable Component</p>
-					{rows[0]}
 					<PGDataRow />
 					<KADataRow />
+					 <ul>
+               			{this.props.data_groups.map((item) => {
+        					return (
+          						<li key={item.process_area}>
+            					 <h2>{item.process_area}</h2>
+            					 <h3>{item.knowledge_area}</h3>
+            					 <h4>{item.data}</h4>
+          						</li>
+       							   )
+      					})}
+           		     </ul>
 				</div>
 			);
 	}
