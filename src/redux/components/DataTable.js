@@ -5,14 +5,14 @@ import KADataRow from './KADataRow.js';
 
 export default class DataTable extends React.Component {
 	render(){
+		const process_group = this.props.process_group;
+		const knowledge_area = this.props.knowledge_area;
+
 		const rows = [];
 		
 		return (
 				<div>
-					<p>Hi I am a DataTable Component</p>
-					<p>Passed in process_group state value as prop: {this.props.process_group} .</p>
-					<p>Passed in knowledge_area state value as prop: {this.props.knowledge_area} .</p>
-
+					{process_group} : {knowledge_area}
 					<KADataRow />
 					 <ul>
                			{this.props.data_groups.map((item) => {
@@ -26,6 +26,7 @@ export default class DataTable extends React.Component {
        							   )
       					})}
            		     </ul>
+					}
 				</div>
 			);
 	}
