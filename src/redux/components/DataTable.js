@@ -7,25 +7,30 @@ export default class DataTable extends React.Component {
 	render(){
 		const process_group = this.props.process_group;
 		const knowledge_area = this.props.knowledge_area;
+		console.log("process_group is " + process_group); // yes
+		console.log("knowledge_area is " + knowledge_area); //yes
 
 		const rows = [];
+
+		this.props.data_groups.map((group) => {
+			if(group.process_group.indexOf(process_group)  === -1){
+				return;
+			}
+			if(group.knowledge_area.indexOf(knowledge_area) === -1){
+				return;
+			}
+			rows.push(
+				<div>
+				  <PGDataRow  process_group={group.process_group} />
+				  <KADataRow knowledge_area={group.knowledge_area} />
+				  
+				</div>
+				)
+		})
 		
 		return (
 				<div>
-					{process_group} : {knowledge_area}
-					<KADataRow />
-					 <ul>
-               			{this.props.data_groups.map((item) => {
-        					return (
-          						<li key={item.process_area}>
-								 <PGDataRow process_group={item.process_area} />
-
-            					 <KADataRow knowledge_area={item.knowledge_area} />
-            					 <h4>{item.data}</h4>
-          						</li>
-       							   )
-      					})}
-           		     </ul>
+					{rows[0]}
 				</div>
 			);
 	}
