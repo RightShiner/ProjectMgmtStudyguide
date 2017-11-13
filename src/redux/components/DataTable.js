@@ -1,6 +1,7 @@
 import React from 'react';
 import PGDataRow from './PGDataRow.js';
 import KADataRow from './KADataRow.js';
+import StepRow from './StepRow.js';
 
 
 export default class DataTable extends React.Component {
@@ -23,7 +24,7 @@ export default class DataTable extends React.Component {
 				<div>
 				  <PGDataRow  process_group={group.process_group} />
 				  <KADataRow knowledge_area={group.knowledge_area} />
-				  
+				  <StepRow step={group.data} />
 				</div>
 				)
 		})
