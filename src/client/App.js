@@ -10,8 +10,8 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			process_group: '',
-			knowledge_area: ''
+			process_group: 'Initiating',
+			knowledge_area: 'Project Integration Management'
 		}
 	}
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         <MessageBar />
         <FilterBar />
-        <DataTable data_groups = {this.props.data_groups}/>
+        <DataTable data_groups = {this.props.data_groups} process_group={this.state.process_group} />
       </div>
     );
   }
