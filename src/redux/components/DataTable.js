@@ -16,10 +16,9 @@ export default class DataTable extends React.Component {
                			{this.props.data_groups.map((item) => {
         					return (
           						<li key={item.process_area}>
-            					 <h2>{item.process_area}</h2>
 								 <PGDataRow process_group={item.process_area} />
 
-            					 <h3>{item.knowledge_area}</h3>
+            					 <KADataRow knowledge_area={item.knowledge_area} />
             					 <h4>{item.data}</h4>
           						</li>
        							   )

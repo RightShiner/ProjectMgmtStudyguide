@@ -5,6 +5,7 @@ export default class KADataRow extends React.Component {
 		return (
 				<div>
 					<p>Hi I am a KADataRow Component</p>
+					{this.props.knowledge_area}
 				</div>
 			);
 	}
