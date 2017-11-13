@@ -5,7 +5,7 @@ export default class PGDataRow extends React.Component {
 		return (
 				<div>
 					<p>Hi I am a DataRow Component
-					{this.props.process_area} booyah</p>
+					{this.props.process_group} booyah</p>
 				</div>
 			);
 	}

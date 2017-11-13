@@ -17,7 +17,7 @@ export default class DataTable extends React.Component {
         					return (
           						<li key={item.process_area}>
             					 <h2>{item.process_area}</h2>
-								 <PGDataRow process_area={item.process_area} />
+								 <PGDataRow process_group={item.process_area} />
 
             					 <h3>{item.knowledge_area}</h3>
             					 <h4>{item.data}</h4>
