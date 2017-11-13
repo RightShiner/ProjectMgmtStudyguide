@@ -7,6 +7,13 @@ import DataTable from '../redux/components/DataTable.js';
 
 
 class App extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			process_group: '',
+			knowledge_area: ''
+		}
+	}
   render() {
     return (
       <div className="App">
