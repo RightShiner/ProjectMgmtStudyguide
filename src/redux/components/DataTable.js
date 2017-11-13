@@ -26,7 +26,6 @@ export default class DataTable extends React.Component {
        							   )
       					})}
            		     </ul>
-					}
 				</div>
 			);
 	}
