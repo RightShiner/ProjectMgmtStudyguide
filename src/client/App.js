@@ -17,9 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MessageBar />
-        <FilterBar />
-        <DataTable data_groups = {this.props.data_groups} process_group={this.state.process_group} />
+        <DataTable data_groups = {this.props.data_groups} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
       </div>
     );
   }

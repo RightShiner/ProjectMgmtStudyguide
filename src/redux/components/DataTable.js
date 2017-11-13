@@ -10,7 +10,9 @@ export default class DataTable extends React.Component {
 		return (
 				<div>
 					<p>Hi I am a DataTable Component</p>
-					<p>Passed in state value: {this.props.process_group} there</p>
+					<p>Passed in process_group state value as prop: {this.props.process_group} .</p>
+					<p>Passed in knowledge_area state value as prop: {this.props.knowledge_area} .</p>
+
 					<KADataRow />
 					 <ul>
                			{this.props.data_groups.map((item) => {
