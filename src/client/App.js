@@ -10,14 +10,22 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			process_group: 'Initiating',
-			knowledge_area: 'Project Integration Management'
+			data_groups: [
+			  { process_group: "Initiating",
+			  knowledge_area: "Project Integration Management",
+			  data : "Develop Project Charter"},
+			  { process_group: "Planning",
+			  knowledge_area: "Project Integration Management",
+			  data : "Develop Project Management Plan"},
+				],
+			process_group: '',
+			knowledge_area: ''
 		}
 	}
   render() {
     return (
       <div className="App">
-        <DataTable data_groups = {this.props.data_groups} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
+        <DataTable data_groups = {this.state.data_groups} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
       </div>
     );
   }
