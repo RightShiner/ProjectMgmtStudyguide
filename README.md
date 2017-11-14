@@ -16,6 +16,8 @@ With that in place, the next step was to build a version that used state, held b
 
 At this point, I determined that I could have a Firebase database containing all of the values used by the app, hydrate the redux store, and boom, that would be the extent as, for this version, there wouldn't be any user-added content or authentication.
 
+On the top-level parent component (App), I create the state, with values of 'data_groups' which (during dev) was populated with hard-coded array of objects with key-values of proces_group, knowledge_area, and data. On this same high-level (App component), I then created setter functions for updating the state values related to those two values. Then, those two functions were passed as props to child component, FilterBar, so they could be invoked by input form.
+
 
 
 The Result

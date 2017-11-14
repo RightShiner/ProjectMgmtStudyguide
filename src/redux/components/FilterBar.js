@@ -23,7 +23,6 @@ export default class FilterBar extends React.Component {
 					<ul>
 						<KAFilter /> 
 						<PGFilter  /> 
-						<h3>Build button to submit here</h3>
 						<form>
 							<input 
 								type="text" 
