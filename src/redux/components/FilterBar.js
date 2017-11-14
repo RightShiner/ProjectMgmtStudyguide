@@ -7,10 +7,10 @@ export default class FilterBar extends React.Component {
 	render(){
 		return (
 				<div>
-					<p>Hi I am a FilterBar Component</p>
 					<ul>
 						<KAFilter /> 
 						<PGFilter  /> 
+						<h3>Build button to submit here</h3>
 					</ul>
 				</div>
 			);

@@ -4,7 +4,7 @@ export default class KnowledgeAreaFilter extends React.Component {
 	render(){
 		return (
 				<div>
-					<li>Hi I am a KnowledgeAreaFilter Component</li>
+					<li>Build text input field</li>
 				</div>
 			);
 	}

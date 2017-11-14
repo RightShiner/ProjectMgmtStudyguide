@@ -5,6 +5,14 @@ import StepRow from './StepRow.js';
 
 
 export default class DataTable extends React.Component {
+
+	// constructor(props){
+	// 	super(props);
+	// 	this.state = {
+	// 		process_group: ,
+	// 		knowledge_area: ''
+	// 	};
+	// }
 	render(){
 		const process_group = this.props.process_group;
 		const knowledge_area = this.props.knowledge_area;

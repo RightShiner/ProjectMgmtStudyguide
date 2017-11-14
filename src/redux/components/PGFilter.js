@@ -4,7 +4,7 @@ export default class ProcessGroupFilter extends React.Component {
 	render(){
 		return (
 				<div>
-					<li>Hi I am a ProcessGroupFilter Component</li>
+					<li>Build text input field</li>
 				</div>
 			);
 	}

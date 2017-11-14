@@ -25,6 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <FilterBar />
         <DataTable data_groups = {this.state.data_groups} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
       </div>
     );
