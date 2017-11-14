@@ -20,12 +20,30 @@ class App extends Component {
 				],
 			process_group: '',
 			knowledge_area: ''
-		}
+		};
+		this.handlePGFilterTextChange = this.handlePGFilterTextChange.bind(this);
+		this.handleKAFilterTextChange = this.handleKAFilterTextChange.bind(this);
 	}
+	  handlePGFilterTextChange(PGFilterText){
+	  	this.setState({
+	  		process_group: PGFilterText
+	  	});
+	  }
+
+	  handleKAFilterTextChange(KAFilterText){
+	  	this.setState({
+	  		knowledge_area: KAFilterText
+	  	});
+	  }
+
   render() {
+   
     return (
       <div className="App">
-        <FilterBar />
+        <FilterBar
+          handlePGFilterTextChange={this.handlePGFilterTextChange}
+          handleKAFilterTextChange={this.handleKAFilterTextChange}
+         />
         <DataTable data_groups = {this.state.data_groups} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
       </div>
     );

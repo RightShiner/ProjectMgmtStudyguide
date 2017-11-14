@@ -4,6 +4,7 @@ import PGFilter from './PGFilter.js';
 
 
 export default class FilterBar extends React.Component {
+
 	render(){
 		return (
 				<div>
@@ -11,6 +12,9 @@ export default class FilterBar extends React.Component {
 						<KAFilter /> 
 						<PGFilter  /> 
 						<h3>Build button to submit here</h3>
+						<form>
+							<input type="text" placeholder="choose.." />
+						</form>
 					</ul>
 				</div>
 			);
