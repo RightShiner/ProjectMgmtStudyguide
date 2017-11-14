@@ -41,8 +41,8 @@ class App extends Component {
     return (
       <div className="App">
         <FilterBar
-          handlePGFilterTextChange={this.handlePGFilterTextChange}
-          handleKAFilterTextChange={this.handleKAFilterTextChange}
+          onPGFilterTextChange={this.handlePGFilterTextChange}
+          onKAFilterTextChange={this.handleKAFilterTextChange}
          />
         <DataTable data_groups = {this.state.data_groups} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
       </div>

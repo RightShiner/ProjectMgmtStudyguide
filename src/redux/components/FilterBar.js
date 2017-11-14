@@ -25,7 +25,11 @@ export default class FilterBar extends React.Component {
 						<PGFilter  /> 
 						<h3>Build button to submit here</h3>
 						<form>
-							<input type="text" placeholder="choose.." />
+							<input 
+								type="text" 
+								placeholder="choose process group.."
+								onChange={this.handlePGFilterTextChange}
+							v />
 						</form>
 					</ul>
 				</div>
