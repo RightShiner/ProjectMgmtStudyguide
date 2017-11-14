@@ -30,6 +30,11 @@ export default class FilterBar extends React.Component {
 								placeholder="choose process group.."
 								onChange={this.handlePGFilterTextChange}
 							v />
+							<input 
+								type="text" 
+								placeholder="choose knowledge area.."
+								onChange={this.handleKAFilterTextChange}
+							v />
 						</form>
 					</ul>
 				</div>
