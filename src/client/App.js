@@ -18,6 +18,9 @@ class App extends Component {
 			  { process_group: "Planning",
 			  knowledge_area: "Project Integration Management",
 			  data : "Develop Project Management Plan"},
+			  { process_group: "Executing",
+			  knowledge_area: "Project Integration Management",
+			  data : "Direct and Manage Project Work"}
 				],
 			process_group: 'Initiating',
 			knowledge_area: 'Project Integration Management'
