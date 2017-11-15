@@ -18,11 +18,9 @@ export function stepsReducer(state = {}, action) {
    
     case 'GET_STEPS_FULFILLED': {
       const {steps} = action.steps;
-      console.log(steps);
       const newState = Object.assign({}, state, {
         inProgress: false,
         success: 'Got steps.',
-        steps  
       });
       newState.steps = [];
       if (steps) {
@@ -30,7 +28,7 @@ export function stepsReducer(state = {}, action) {
       }
       return newState;
     }
-   
+
     default:
       return state;
   }
