@@ -18,7 +18,9 @@ At this point, I determined that I could have a Firebase database containing all
 
 On the top-level parent component (App), I create the state, with values of 'data_groups' which (during dev) was populated with hard-coded array of objects with key-values of proces_group, knowledge_area, and data. On this same high-level (App component), I then created setter functions for updating the state values related to those two values. Then, those two functions were passed as props to child component, FilterBar, so they could be invoked by input form.
 
-Dropdown menus were added, one for knowledge area and one for process group. Selecting one of these updates the App component state, with that being passed to DataTable"
+Dropdown menus were added, one for knowledge area and one for process group. Selecting one of these updates the App component state, with that being passed to DataTable.
+
+Next step was setting up Firebase db, doing config, and setting up Redux store. For the latter, for me I like taking it one step at a time- testing to make sure that action creators are working by hard-coding dispatches from the store, etc. If nothing breaks, then add more complexity.
 
 
 
