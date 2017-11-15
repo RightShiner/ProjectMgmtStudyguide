@@ -12,21 +12,21 @@ class App extends Component {
 		super(props);
 		this.state = {
 			// no need for steps here at this state is component level only
-			process_group: 'Initiating',
-			knowledge_area: 'Project Integration Management'
+			local_process_group: 'Initiating',
+			local_knowledge_area: 'Project Integration Management'
 		};
 		this.handlePGFilterTextChange = this.handlePGFilterTextChange.bind(this);
 		this.handleKAFilterTextChange = this.handleKAFilterTextChange.bind(this);
 	}
 	  handlePGFilterTextChange(PGFilterText){
 	  	this.setState({
-	  		process_group: PGFilterText
+	  		local_process_group: PGFilterText
 	  	});
 	  }
 
 	  handleKAFilterTextChange(KAFilterText){
 	  	this.setState({
-	  		knowledge_area: KAFilterText
+	  		local_knowledge_area: KAFilterText
 	  	});
 	  }
 
@@ -45,7 +45,7 @@ class App extends Component {
           onPGFilterTextChange={this.handlePGFilterTextChange}
           onKAFilterTextChange={this.handleKAFilterTextChange}
          />
-        <DataTable data_groups = {this.props.steps} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
+        <DataTable steps = {this.props.state} local_process_group={this.state.local_process_group} local_knowledge_area={this.state.local_knowledge_area} />
       </div>
     );
   }

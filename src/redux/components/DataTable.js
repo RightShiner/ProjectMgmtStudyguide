@@ -14,16 +14,15 @@ export default class DataTable extends React.Component {
 	// 	};
 	// }
 	render(){
-		const process_group = this.props.process_group;
-		const knowledge_area = this.props.knowledge_area;
+		const local_process_group = this.props.local_process_group;
+		const local_knowledge_area = this.props.local_knowledge_area;
 		const rows = [];
+        const { data, knowledge_area,process_group } = this.props.steps;
 
-		
 		
 		return (
 				<div>
 					<h3>hello</h3>
-					<h4>Data groups:{this.props.data_groups[0]}</h4>
 				</div>
 			);
 	}
