@@ -32,8 +32,6 @@ export default class FilterBar extends React.Component {
 								<option value="Executing">Executing</option>
 								<option value="Monitoring & Controlling">Monitoring & Controlling</option>
 								<option value="Closing">Closing</option>
-
-
 							</select>
 						</label>
 
@@ -50,18 +48,8 @@ export default class FilterBar extends React.Component {
 								<option value="Project Risk Management">Project Risk Management</option>
 								<option value="Project Procurement Management">Project Procurement Management</option>
 								<option value="Project Stakeholder Management">Project Stakeholder Management</option>
-
-
-
-
-
-
-
-
 							</select>
 						</label>
-							
-							
 						</form>
 					</ul>
 				</div>
