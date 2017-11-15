@@ -8,14 +8,11 @@ export default class DataTable extends React.Component {
 	render(){
 		const local_process_group = this.props.local_process_group;
 		const local_knowledge_area = this.props.local_knowledge_area;
-		const rows = [];
-
-    	const { data } = this.props.state_steps;
-
 
 		return (
 				<div>
-					<h3>hello</h3>
+					<h3>hello {local_knowledge_area} : {local_process_group} </h3>
+					
 				</div>
 			);
 	}
