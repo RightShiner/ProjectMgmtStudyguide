@@ -10,7 +10,8 @@ import rootReducer from './redux/reducers/root_reducer.js';
 
 const logger = createLogger();
 const store = createStore(rootReducer,{},applyMiddleware(thunk,logger));
-store.dispatch({type: 'GET_STEPS_REQUESTED'});
+// store.dispatch({type: 'GET_STEPS_REQUESTED'}); // yes
+store.dispatch({type:'GET_STEPS_FULFILLED', steps: {"color":"blue"}});
 console.log(store.getState());
 // const DataGroups = [
 // 	  { process_group: "Initiating",

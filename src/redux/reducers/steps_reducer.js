@@ -14,22 +14,22 @@ export function stepsReducer(state = {}, action) {
         error: 'Error in getting steps.',
       });
     }
-    // case ActionTypes.GetStepsFulfilled: {
-    //   const { host, agenda, guests } = action.invite;
-    //   const newState = Object.assign({}, state, {
-    //     inProgress: false,
-    //     success: 'Got invite.',
-    //     host,
-    //     agenda
-    //   });
-    //   newState.guests = [];
-    //   if (guests) {
-    //     newState.guests = Object.keys(guests).map(k => guests[k]);
-    //   }
-    //   return newState;
-    // }
+    case 'GET_STEPS_FULFILLED': {
+      const newState = Object.assign({}, state, {
+        inProgress: false,
+        success: 'Got steps.',
+        steps : action.steps
+      });
+      newState.steps = [];
+      if (action.steps) {
+        newState.steps = Object.keys(action.steps).map(k => action.steps[k]);
+      }
+      return newState;
+    }
    
     default:
       return state;
   }
 }
+
+
