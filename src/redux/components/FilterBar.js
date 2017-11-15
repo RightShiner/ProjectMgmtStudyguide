@@ -1,7 +1,14 @@
 import React from 'react';
 import KAFilter from './KAFilter.js';
 import PGFilter from './PGFilter.js';
+import {FormGroup,ControlLabel,FormControl} from 'react-bootstrap';
 
+
+
+
+function logChange(val) {
+  console.log('Selected: ', val);
+}
 
 export default class FilterBar extends React.Component {
 	constructor(props){
@@ -17,25 +24,28 @@ export default class FilterBar extends React.Component {
 	handleKAFilterTextChange(e){
 		this.props.onKAFilterTextChange(e.target.value);
 	}
+
+
 	render(){
 		return (
 				<div>
-					<ul>
-						<form>
-						<label>
-							Choose a  process group:
-							<select value={this.props.process_group} onChange={this.handlePGFilterTextChange}>
-								<option value="Initiating">Initiating</option>
-								<option value="Planning">Planning</option>
-								<option value="Executing">Executing</option>
-								<option value="Monitoring & Controlling">Monitoring & Controlling</option>
-								<option value="Closing">Closing</option>
-							</select>
-						</label>
-
-						<label>
-							Choose a knowledge area:
-							<select value={this.props.knowledge_area} onChange={this.handleKAFilterTextChange}>
+				  <FormGroup controlId="formControlsSelect">
+          			 <ControlLabel>Select Process Group</ControlLabel>
+        		       <FormControl 
+             			 onChange={this.handlePGFilterTextChange}
+              			 componentClass="select" placeholder="Select Process Group">
+               				 <option value="Initiating">Initiating</option>
+							 <option value="Planning">Planning</option>
+							 <option value="Executing">Executing</option>
+							 <option value="Monitoring & Controlling">Monitoring & Controlling</option>
+							 <option value="Closing">Closing</option>
+          			   </FormControl>
+        		  </FormGroup>
+        		  <FormGroup controlId="formControlsSelect">
+          			 <ControlLabel>Select Knowledge Area</ControlLabel>
+        		       <FormControl 
+             			 onChange={this.handleKAFilterTextChange}
+              			 componentClass="select" placeholder="Select Knowledge Area">
 								<option value="Project Integration Management">Project Integration Management</option>
 								<option value="Project Scope Management">Project Scope Management</option>
 								<option value="Project Time Management">Project Time Management</option>
@@ -46,10 +56,9 @@ export default class FilterBar extends React.Component {
 								<option value="Project Risk Management">Project Risk Management</option>
 								<option value="Project Procurement Management">Project Procurement Management</option>
 								<option value="Project Stakeholder Management">Project Stakeholder Management</option>
-							</select>
-						</label>
-						</form>
-					</ul>
+          			   </FormControl>
+        		  </FormGroup>
+					
 				</div>
 			);
 	}
