@@ -1,0 +1,18 @@
+{
+		"steps" : {
+		 "process_group1" : {
+		 	"process group" :"Initiating",
+			 "knowledge_area" : "Project Integration Management",
+			  "data" : "Develop Project Charter"
+			},
+			"process_group2" : {
+		 	"process group" :"this",
+			 "knowledge_area" : "Project Integration Management",
+			  "data" : "drink coffee"
+			}
+	 } 
+
+}
+			 
+			
+

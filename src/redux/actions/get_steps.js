@@ -3,9 +3,9 @@ import database from './database.js';
 export function getSteps(){
 	return dispatch => {
 		dispatch(getStepsRequestedAction());
-		dispatch(getStepsRejectedAction());
 		return database.ref('/').once('value',snap => {
 			const steps = snap.val();
+			// console.log("look" + steps);  // Obj Obj
 			dispatch(getStepsFulfilledAction(steps))
 		})
 		.catch((error) => {

@@ -11,17 +11,7 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			data_groups: [
-			  { process_group: "Initiating",
-			  knowledge_area: "Project Integration Management",
-			  data : "Develop Project Charter"},
-			  { process_group: "Planning",
-			  knowledge_area: "Project Integration Management",
-			  data : "Develop Project Management Plan"},
-			  { process_group: "Executing",
-			  knowledge_area: "Project Integration Management",
-			  data : "Direct and Manage Project Work"}
-				],
+			// no need for steps here at this state is component level only
 			process_group: 'Initiating',
 			knowledge_area: 'Project Integration Management'
 		};
@@ -43,7 +33,7 @@ class App extends Component {
 	   componentDidMount() {
     		this.props.onGetSteps();
   		}
-  		
+
   render() {
    // var {color} = this.props.steps; // yes
     return (
@@ -55,7 +45,7 @@ class App extends Component {
           onPGFilterTextChange={this.handlePGFilterTextChange}
           onKAFilterTextChange={this.handleKAFilterTextChange}
          />
-        <DataTable data_groups = {this.state.data_groups} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
+        <DataTable data_groups = {this.props.steps} process_group={this.state.process_group} knowledge_area={this.state.knowledge_area} />
       </div>
     );
   }

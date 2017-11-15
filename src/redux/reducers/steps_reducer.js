@@ -14,15 +14,19 @@ export function stepsReducer(state = {}, action) {
         error: 'Error in getting steps.',
       });
     }
+
+   
     case 'GET_STEPS_FULFILLED': {
+      const {steps} = action.steps;
+      console.log(steps);
       const newState = Object.assign({}, state, {
         inProgress: false,
         success: 'Got steps.',
-        steps : action.steps
+        steps  
       });
       newState.steps = [];
-      if (action.steps) {
-        newState.steps = Object.keys(action.steps).map(k => action.steps[k]);
+      if (steps) {
+        newState.steps = Object.keys(steps).map(k => steps[k]);
       }
       return newState;
     }
