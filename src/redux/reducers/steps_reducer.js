@@ -1,5 +1,5 @@
 
-export function stepsReducer(state = {color:"blue"}, action) {
+export function stepsReducer(state = {}, action) {
   switch(action.type) {
     case 'GET_STEPS_REQUESTED': {
       return Object.assign({}, state, {
