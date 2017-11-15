@@ -2,7 +2,7 @@ import React from 'react';
 import KAFilter from './KAFilter.js';
 import PGFilter from './PGFilter.js';
 import {FormGroup,ControlLabel,FormControl} from 'react-bootstrap';
-
+import {Grid,Row,Col} from 'react-bootstrap';
 
 
 
