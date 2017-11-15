@@ -18,8 +18,8 @@ class App extends Component {
 			  knowledge_area: "Project Integration Management",
 			  data : "Develop Project Management Plan"},
 				],
-			process_group: '',
-			knowledge_area: ''
+			process_group: 'Initiating',
+			knowledge_area: 'Project Integration Management'
 		};
 		this.handlePGFilterTextChange = this.handlePGFilterTextChange.bind(this);
 		this.handleKAFilterTextChange = this.handleKAFilterTextChange.bind(this);
