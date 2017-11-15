@@ -21,8 +21,6 @@ export default class FilterBar extends React.Component {
 		return (
 				<div>
 					<ul>
-						<KAFilter /> 
-						<PGFilter  /> 
 						<form>
 						<label>
 							Choose a  process group:
