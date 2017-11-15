@@ -29,6 +29,11 @@ export default class FilterBar extends React.Component {
 							<select value={this.props.process_group} onChange={this.handlePGFilterTextChange}>
 								<option value="Initiating">Initiating</option>
 								<option value="Planning">Planning</option>
+								<option value="Executing">Executing</option>
+								<option value="Monitoring & Controlling">Monitoring & Controlling</option>
+								<option value="Closing">Closing</option>
+
+
 							</select>
 						</label>
 
