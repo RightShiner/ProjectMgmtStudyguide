@@ -24,11 +24,14 @@ export default class FilterBar extends React.Component {
 						<KAFilter /> 
 						<PGFilter  /> 
 						<form>
-							<input 
-								type="text" 
-								placeholder="choose process group.."
-								onChange={this.handlePGFilterTextChange}
-							v />
+						<label>
+							Choose a  process group:
+							<select value={this.props.process_group} onChange={this.handlePGFilterTextChange}>
+								<option value="Initiating">Initiating</option>
+								<option value="Planning">Planning</option>
+							</select>
+						</label>
+							
 							<input 
 								type="text" 
 								placeholder="choose knowledge area.."
