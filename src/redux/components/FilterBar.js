@@ -37,6 +37,22 @@ export default class FilterBar extends React.Component {
 							<select value={this.props.knowledge_area} onChange={this.handleKAFilterTextChange}>
 								<option value="Project Integration Management">Project Integration Management</option>
 								<option value="Project Scope Management">Project Scope Management</option>
+								<option value="Project Time Management">Project Time Management</option>
+								<option value="Project Cost Management">Project Cost Management</option>
+								<option value="Project Quality Management">Project Quality Management</option>
+								<option value="Project Human Resource Management">Project Human Resource Management</option>
+								<option value="Project Communications Management">Project Communications Management</option>
+								<option value="Project Risk Management">Project Risk Management</option>
+								<option value="Project Procurement Management">Project Procurement Management</option>
+								<option value="Project Stakeholder Management">Project Stakeholder Management</option>
+
+
+
+
+
+
+
+
 							</select>
 						</label>
 							
