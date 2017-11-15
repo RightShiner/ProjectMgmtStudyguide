@@ -12,7 +12,7 @@ const logger = createLogger();
 const store = createStore(rootReducer,{},applyMiddleware(thunk,logger));
 // store.dispatch({type: 'GET_STEPS_REQUESTED'}); // yes
 // store.dispatch({type:'GET_STEPS_FULFILLED', steps: {"color":"blue"}}); //yes
-console.log(store.getState());
+// console.log(store.getState());
 // const DataGroups = [
 // 	  { process_group: "Initiating",
 // 	  knowledge_area: "Project Integration Management",
