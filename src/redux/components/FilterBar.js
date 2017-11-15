@@ -31,12 +31,16 @@ export default class FilterBar extends React.Component {
 								<option value="Planning">Planning</option>
 							</select>
 						</label>
+
+						<label>
+							Choose a knowledge area:
+							<select value={this.props.knowledge_area} onChange={this.handleKAFilterTextChange}>
+								<option value="Project Integration Management">Project Integration Management</option>
+								<option value="Project Scope Management">Project Scope Management</option>
+							</select>
+						</label>
 							
-							<input 
-								type="text" 
-								placeholder="choose knowledge area.."
-								onChange={this.handleKAFilterTextChange}
-							v />
+							
 						</form>
 					</ul>
 				</div>
