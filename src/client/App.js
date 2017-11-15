@@ -39,13 +39,12 @@ class App extends Component {
 	  		knowledge_area: KAFilterText
 	  	});
 	  }
-
   render() {
-   
+   var {color} = this.props.steps;
     return (
       <div className="App">
         <Jumbotron>
-        	<h3>Five Traditional Process Groups </h3>
+        	<h3>Five Traditional Process Groups {color}</h3>
         </Jumbotron>
         <FilterBar
           onPGFilterTextChange={this.handlePGFilterTextChange}

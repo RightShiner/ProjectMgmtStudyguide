@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './client/App.js';
+import AppContainer from './redux/containers/AppContainer.js';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 import rootReducer from './redux/reducers/root_reducer.js';
-import getSteps from './redux/actions/get_steps.js';
 
 const logger = createLogger();
 const store = createStore(rootReducer,{},applyMiddleware(thunk,logger));
@@ -23,5 +22,5 @@ console.log(store.getState());
 // 	  data : "Develop Project Management Plan"},
 // ];
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(<Provider store={store}><AppContainer /></Provider>, document.getElementById('root'));
 
