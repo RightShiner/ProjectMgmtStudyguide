@@ -3,6 +3,7 @@ import './App.css';
 import MessageBar from '../redux/components/MessageBar.js';
 import FilterBar from '../redux/components/FilterBar.js';
 import DataTable from '../redux/components/DataTable.js';
+import {Grid,Row,Col,Jumbotron} from 'react-bootstrap';
 
 
 
@@ -40,6 +41,9 @@ class App extends Component {
    
     return (
       <div className="App">
+        <Jumbotron>
+        	<h3>Five Traditional Process Groups </h3>
+        </Jumbotron>
         <FilterBar
           onPGFilterTextChange={this.handlePGFilterTextChange}
           onKAFilterTextChange={this.handleKAFilterTextChange}
