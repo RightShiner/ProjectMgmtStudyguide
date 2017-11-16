@@ -10,14 +10,15 @@ export default class DataTable extends React.Component {
 		const local_knowledge_area = this.props.local_knowledge_area;
 
    		const {steps}= this.props.steps;
+   		const step = this.props.step;
 
 
    	    return (
    	    		<div>
+   	    			<p>Step: {step}</p>
    	    		    {steps && steps.length > 0 ? (
 			            <ul>
 			              {steps.map((step, index) => {
-			              	console.log("here"+step.knowledge_area)
 			                return (
 			                  <li key={index}>
 			                    KA: {step.knowledge_area}
@@ -28,7 +29,7 @@ export default class DataTable extends React.Component {
 			                );
 			              })}
 			            </ul>
-          ) : null}
+          			) : null}
    	    		</div>
    	    	   )
 			}	
