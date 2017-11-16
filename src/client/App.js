@@ -33,16 +33,19 @@ class App extends Component {
 	  	});
 	  }
 
-	  setFilteredStep(step){
-	  	this.setState({
-	  		step: step
-	  	});
+	  setFilteredStep(datagroup){
+	  	if(this.state.local_process_group == datagroup.process_group){
+	  		this.setState({
+	  		step: datagroup.data
+	  	 });
+	  	}
+	  	
 	  	console.log("all set");
 	  }
 
 	   componentDidMount() {
     		this.props.onGetSteps();
-    		this.setFilteredStep("ok");
+    		this.setFilteredStep({process_group: "Planning", data: "drink coffee"});
     		console.log("huh" + this.state.step);
     		}
 
