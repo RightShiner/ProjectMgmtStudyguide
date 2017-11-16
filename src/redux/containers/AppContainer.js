@@ -4,7 +4,7 @@ import App from '../../client/App.js';
 
 function mapStateToProps(state) {
   return {
-    steps : state.steps
+    steps_state : state.steps
   };
 }
 
