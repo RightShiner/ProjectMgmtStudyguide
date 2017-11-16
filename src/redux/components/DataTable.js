@@ -11,8 +11,7 @@ export default class DataTable extends React.Component {
 
 		return (
 				<div>
-					<h3>hello {local_knowledge_area} : {local_process_group} </h3>
-					
+					<p>hello world</p>
 				</div>
 			);
 	}
