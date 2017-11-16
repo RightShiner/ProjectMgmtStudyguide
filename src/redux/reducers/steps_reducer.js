@@ -15,7 +15,6 @@ export function stepsReducer(state = {}, action) {
       });
     }
 
-   
     case 'GET_STEPS_FULFILLED': {
       const {steps} = action.steps;
       const newState = Object.assign({}, state, {

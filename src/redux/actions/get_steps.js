@@ -6,6 +6,8 @@ export function getSteps(){
 		return database.ref('/').once('value',snap => {
 			const steps = snap.val();
 			// console.log("look" + steps);  // Obj Obj
+      		// const { host, agenda, guests } = action.invite;
+
 			dispatch(getStepsFulfilledAction(steps))
 		})
 		.catch((error) => {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import MessageBar from '../redux/components/MessageBar.js';
 import FilterBar from '../redux/components/FilterBar.js';
 import DataTable from '../redux/components/DataTable.js';
 import {Grid,Row,Col,Jumbotron} from 'react-bootstrap';
@@ -45,7 +44,7 @@ class App extends Component {
           onPGFilterTextChange={this.handlePGFilterTextChange}
           onKAFilterTextChange={this.handleKAFilterTextChange}
          />
-        <DataTable steps_state = {this.props.steps_state} local_process_group={this.state.local_process_group} local_knowledge_area={this.state.local_knowledge_area} />
+        <DataTable steps = {this.props.steps} local_process_group={this.state.local_process_group} local_knowledge_area={this.state.local_knowledge_area} />
       </div>
     );
   }

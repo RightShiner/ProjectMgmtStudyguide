@@ -1,5 +1,4 @@
 {
-	"steps" : {
 		 "process_group1" : {
 		 	"process group" :"Initiating",
 			 "knowledge_area" : "Project Integration Management",
@@ -10,7 +9,6 @@
 			 "knowledge_area" : "Project Integration Management",
 			  "data" : "drink coffee"
 			}
-	} 
 }
 
 		 
