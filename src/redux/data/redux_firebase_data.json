@@ -5,7 +5,7 @@
 			  "data" : "Develop Project Charter"
 			},
 		 "process_group2" : {
-		 	"process group" :"this",
+		 	"process_group" :"this",
 			 "knowledge_area" : "Project Integration Management",
 			  "data" : "drink coffee"
 			}

@@ -17,9 +17,13 @@ export default class DataTable extends React.Component {
    	    		    {steps && steps.length > 0 ? (
 			            <ul>
 			              {steps.map((step, index) => {
+			              	console.log("here"+step.knowledge_area)
 			                return (
 			                  <li key={index}>
-			                    {step.data}
+			                    KA: {step.knowledge_area}
+			                    PA: {step.process_area}
+			                    Step: {step.data}
+
 			                  </li>
 			                );
 			              })}
