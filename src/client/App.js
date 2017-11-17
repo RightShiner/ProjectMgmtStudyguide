@@ -12,8 +12,7 @@ class App extends Component {
 		this.state = {
 			// no need for steps here at this state is component level only
 			local_process_group: 'Initiating',
-			local_knowledge_area: 'Project Integration Management',
-			step: ""
+			local_knowledge_area: 'Project Integration Management'
 		};
 		this.handlePGFilterTextChange = this.handlePGFilterTextChange.bind(this);
 		this.handleKAFilterTextChange = this.handleKAFilterTextChange.bind(this);
