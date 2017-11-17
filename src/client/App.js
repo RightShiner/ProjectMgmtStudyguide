@@ -13,7 +13,8 @@ class App extends Component {
 			// no need for steps here at this state is component level only
 			local_process_group: 'Initiating',
 			local_knowledge_area: 'Project Integration Management',
-			steps: "test"
+			steps: [],
+			step: "test"
 		};
 		this.handlePGFilterTextChange = this.handlePGFilterTextChange.bind(this);
 		this.handleKAFilterTextChange = this.handleKAFilterTextChange.bind(this);
@@ -34,9 +35,9 @@ class App extends Component {
 	  }
 
 	  setFilteredStep(datagroup){
-	  	    if(datagroup.process_group === this.state.local_process_group){
+	  	    if(datagroup.process_group === this.state.local_process_group && datagroup.knowledge_area === this.state.local_knowledge_area){
 	  	    	this.setState({
-	  							steps: datagroup.data
+	  							step: datagroup.data
 	  	 					 });
 	  	   		 }
 	  	     else{
@@ -51,7 +52,10 @@ class App extends Component {
 
 	   componentDidMount() {
     		this.props.onGetSteps();
-    		this.setFilteredStep({process_group: "Initiating", data: "helloooo world"});
+    		this.setFilteredStep({
+    			process_group: "Initiating",
+    			knowledge_area: "Project Integration Management",
+    			data: "bonjour world :)"});
     		console.log("huh" + this.state.step);
     		}
 
@@ -69,7 +73,7 @@ class App extends Component {
           onPGFilterTextChange={this.handlePGFilterTextChange}
           onKAFilterTextChange={this.handleKAFilterTextChange}
          />
-        <DataTable steps = {this.state.steps} step = {this.state.step} local_process_group={this.state.local_process_group} local_knowledge_area={this.state.local_knowledge_area} />
+        <DataTable  step = {this.state.step} local_process_group={this.state.local_process_group} local_knowledge_area={this.state.local_knowledge_area} />
       </div>
     );
   }

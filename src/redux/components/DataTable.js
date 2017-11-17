@@ -12,7 +12,7 @@ export default class DataTable extends React.Component {
 
    	    return (
    	    		<div>
-   	    		  	<p>passed in as prop: {this.props.steps}</p>
+   	    		  	<p>Step(s) to take: {this.props.step}</p>
    	    		</div>
    	    	   )
 			}	
