@@ -22,7 +22,9 @@ Dropdown menus were added, one for knowledge area and one for process group. Sel
 
 Next step was setting up Firebase db, doing config, and setting up Redux store. For the latter, for me I like taking it one step at a time- testing to make sure that action creators are working by hard-coding dispatches from the store, etc. If nothing breaks, then add more complexity.
 
-
+The biggest challenges that I found were twofold:
+1. Having a syncronicity between Firebase DB structures and the app structure within Redux
+2. The work in progress right now is that I have set as state filtered values as selected by user, and I have successfully been able to loop through the data objects (in array) but the linking of the filtered state values with the rendered value is I/P
 
 
 The Result
