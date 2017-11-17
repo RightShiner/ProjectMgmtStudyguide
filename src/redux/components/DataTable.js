@@ -12,7 +12,7 @@ export default class DataTable extends React.Component {
 
    	    return (
    	    		<div>
-   	    		  	<p>hello world</p>
+   	    		  	<p>passed in as prop: {this.props.steps}</p>
    	    		</div>
    	    	   )
 			}	

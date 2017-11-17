@@ -69,7 +69,7 @@ class App extends Component {
           onPGFilterTextChange={this.handlePGFilterTextChange}
           onKAFilterTextChange={this.handleKAFilterTextChange}
          />
-        <DataTable steps = {this.props.steps} step = {this.state.step} local_process_group={this.state.local_process_group} local_knowledge_area={this.state.local_knowledge_area} />
+        <DataTable steps = {this.state.steps} step = {this.state.step} local_process_group={this.state.local_process_group} local_knowledge_area={this.state.local_knowledge_area} />
       </div>
     );
   }
