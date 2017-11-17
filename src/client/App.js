@@ -54,8 +54,12 @@ class App extends Component {
          	{this.props.steps.datagroups && this.props.steps.datagroups.length > 0 ? (
             <ul>
               {this.props.steps.datagroups.map((data, index) => {
+
+              
                 return (
                   <li key={index}>
+                    {data.process_group}
+                    {data.knowledge_area}
                     {data.data}
                   </li>
                 );
