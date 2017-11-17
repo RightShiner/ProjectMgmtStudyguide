@@ -13,7 +13,14 @@ class App extends Component {
 			// no need for steps here at this state is component level only
 			local_process_group: 'Initiating',
 			local_knowledge_area: 'Project Integration Management',
-			steps: [],
+			steps: [{
+    			process_group: "Initiating",
+    			knowledge_area: "Project Integration Management",
+    			data: "bonjour taco :)"},
+    			{
+    			process_group: "Initiating2",
+    			knowledge_area: "Project Integration Management",
+    			data: "bonjour burrito :)"}],
 			step: "test"
 		};
 		this.handlePGFilterTextChange = this.handlePGFilterTextChange.bind(this);
@@ -35,9 +42,10 @@ class App extends Component {
 	  }
 
 	  setFilteredStep(datagroup){
-	  	    if(datagroup.process_group === this.state.local_process_group && datagroup.knowledge_area === this.state.local_knowledge_area){
+	  	    for(var i = 0; i<datagroup.length; i++){
+	  	    	if(datagroup[i].process_group === this.state.local_process_group && datagroup[i].knowledge_area === this.state.local_knowledge_area){
 	  	    	this.setState({
-	  							step: datagroup.data
+	  							step: datagroup[i].data
 	  	 					 });
 	  	   		 }
 	  	     else{
@@ -45,18 +53,14 @@ class App extends Component {
 	  				steps: "nothing new"
 	  	 			});
 	  	     }
-	  		
-	  	
 	  	console.log("all set");
+	 	  }
 	  }
+	  	    
 
 	   componentDidMount() {
     		this.props.onGetSteps();
-    		this.setFilteredStep({
-    			process_group: "Initiating",
-    			knowledge_area: "Project Integration Management",
-    			data: "bonjour world :)"});
-    		console.log("huh" + this.state.step);
+    		this.setFilteredStep(this.state.steps);
     		}
 
   render() {
@@ -68,7 +72,6 @@ class App extends Component {
         <Jumbotron>
         	<h3>Five Traditional Process Groups</h3>
         </Jumbotron>
-        <h4>{this.state.steps}</h4>
         <FilterBar
           onPGFilterTextChange={this.handlePGFilterTextChange}
           onKAFilterTextChange={this.handleKAFilterTextChange}
