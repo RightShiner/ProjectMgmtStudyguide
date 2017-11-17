@@ -34,7 +34,7 @@ class App extends Component {
 	  }
 
 	  setFilteredStep(datagroup){
-	  	    if(datagroup.data ==="hello world"){
+	  	    if(datagroup.process_group === this.state.local_process_group){
 	  	    	this.setState({
 	  							steps: datagroup.data
 	  	 					 });
@@ -51,7 +51,7 @@ class App extends Component {
 
 	   componentDidMount() {
     		this.props.onGetSteps();
-    		this.setFilteredStep({process_group: "Initiating", data: "hello world"});
+    		this.setFilteredStep({process_group: "Initiating", data: "helloooo world"});
     		console.log("huh" + this.state.step);
     		}
 
