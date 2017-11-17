@@ -44,7 +44,7 @@ class App extends Component {
 
 	   componentDidMount() {
     		this.props.onGetSteps();
-    		this.setFilteredStep({process_group: "Planning", data: "drink coffee"});
+    		this.setFilteredStep({process_group: "Initiating", data: "drink coffee"});
     		console.log("huh" + this.state.step);
     		}
 
@@ -57,6 +57,7 @@ class App extends Component {
         <Jumbotron>
         	<h3>Five Traditional Process Groups</h3>
         </Jumbotron>
+        <h4>{this.state.step}</h4>
         <FilterBar
           onPGFilterTextChange={this.handlePGFilterTextChange}
           onKAFilterTextChange={this.handleKAFilterTextChange}
