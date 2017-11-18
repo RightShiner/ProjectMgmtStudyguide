@@ -19,7 +19,7 @@ export function stepsReducer(state = {}, action) {
       const {datagroups} = action.steps.steps;
       const newState = Object.assign({}, state, {
         inProgress: false,
-        success: 'Got steps.',
+        success: 'Got steps.'
       });
       newState.datagroups = [];
       if (datagroups) {
