@@ -26,6 +26,8 @@ The biggest challenges that I found were twofold:
 1. Having a syncronicity between Firebase DB structures and the app structure within Redux
 2. The work in progress right now is that I have set as state filtered values as selected by user, and I have successfully been able to loop through the data objects (in array) but the linking of the filtered state values with the rendered value is I/P
 
+My subsequent approach was to create two new reducers to allow for state to hold the process_group and knowledge_area values. Then, in the main steps reducer I can access those values for filtering outputted data
+
 
 The Result
 
