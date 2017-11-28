@@ -33,6 +33,7 @@ class App extends Component {
 
 	   componentDidMount() {
     		this.props.onGetSteps();
+        this.props.setNewKaFilter('hi');
     		}
 
   render() {
@@ -47,8 +48,9 @@ class App extends Component {
         
         <FilterBar
           onPGFilterTextChange={this.handlePGFilterTextChange}
-          onKAFilterTextChange={this.handleKAFilterTextChange}
+          onKAFilterTextChange={this.props.setNewKaFilter}
          />
+        
 
          <div>
          	{this.props.steps && this.props.steps.length > 0 ? (
