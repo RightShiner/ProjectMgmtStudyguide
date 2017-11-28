@@ -2,9 +2,17 @@ import { connect } from 'react-redux';
 import { getSteps } from '../actions/get_steps.js';
 import App from '../../client/App.js';
 
+// create function that manipulates state.steps data and
+// passes that data to App
+
+function filterSteps (steps, pgFilter, kaFilter){
+	 return steps;
+}
+
+
 function mapStateToProps(state) {
   return {
-    steps : state.steps
+    steps : state.steps.datagroups
   };
 }
 

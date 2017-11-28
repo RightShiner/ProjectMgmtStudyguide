@@ -6,37 +6,37 @@ import {Grid,Row,Col,Jumbotron} from 'react-bootstrap';
 
 
 class App extends Component {
-	constructor(props){
-		super(props);
-		this.state = {
-			// no need for steps here at this state is component level only
-			local_process_group: 'Initiating',
-			local_knowledge_area: 'Project Integration Management'
-		};
+	// constructor(props){
+	// 	super(props);
+	// 	this.state = {
+	// 		// no need for steps here at this state is component level only
+	// 		local_process_group: 'Initiating',
+	// 		local_knowledge_area: 'Project Integration Management'
+	// 	};
 
-		this.handlePGFilterTextChange = this.handlePGFilterTextChange.bind(this);
-		this.handleKAFilterTextChange = this.handleKAFilterTextChange.bind(this);
-	}
+	// 	this.handlePGFilterTextChange = this.handlePGFilterTextChange.bind(this);
+	// 	this.handleKAFilterTextChange = this.handleKAFilterTextChange.bind(this);
+	// }
 
 	
-	  handlePGFilterTextChange(PGFilterText){
-	  	this.setState({
-	  		local_process_group: PGFilterText
-	  	});
-	  }
+	  // handlePGFilterTextChange(PGFilterText){
+	  // 	this.setState({
+	  // 		local_process_group: PGFilterText
+	  // 	});
+	  // }
 
-	  handleKAFilterTextChange(KAFilterText){
-	  	this.setState({
-	  		local_knowledge_area: KAFilterText
-	  	});
-	  }
+	  // handleKAFilterTextChange(KAFilterText){
+	  // 	this.setState({
+	  // 		local_knowledge_area: KAFilterText
+	  // 	});
+	  // }
 
 	   componentDidMount() {
     		this.props.onGetSteps();
     		}
 
   render() {
-  	const {data} = this.props.steps;
+  	// const data = this.props.steps;
 
     return (
 
@@ -51,9 +51,9 @@ class App extends Component {
          />
 
          <div>
-         	{this.props.steps.datagroups && this.props.steps.datagroups.length > 0 ? (
+         	{this.props.steps && this.props.steps.length > 0 ? (
             <ul>
-              {this.props.steps.datagroups.map((data, index) => {
+              {this.props.steps.map((data, index) => {
 
               
                 return (
