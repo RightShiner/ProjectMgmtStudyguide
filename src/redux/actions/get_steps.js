@@ -36,6 +36,13 @@ function getStepsFulfilledAction(steps){
 	}
 }
 
+export function setKaFilter(kaFilter){
+	return {
+		type: 'SET_KA_FILTER',
+		kaFilter
+	}
+}
+
 
 
 

@@ -8,8 +8,11 @@ import thunk from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 import rootReducer from './redux/reducers/root_reducer.js';
 
+import {setKaFilter} from './redux/actions/get_steps.js';
+
 const logger = createLogger();
 const store = createStore(rootReducer,{},applyMiddleware(thunk,logger));
+store.dispatch(setKaFilter('test'))
 
 ReactDOM.render(<Provider store={store}>
                   <AppContainer />
