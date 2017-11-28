@@ -34,6 +34,7 @@ class App extends Component {
 	   componentDidMount() {
     		this.props.onGetSteps();
         this.props.setNewKaFilter('hi');
+        this.props.setNewPgFiler('there');
     		}
 
   render() {
@@ -47,7 +48,7 @@ class App extends Component {
         </Jumbotron>
         
         <FilterBar
-          onPGFilterTextChange={this.handlePGFilterTextChange}
+          onPGFilterTextChange={this.props.setNewPgFiler}
           onKAFilterTextChange={this.props.setNewKaFilter}
          />
         

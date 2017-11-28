@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { getSteps } from '../actions/get_steps.js';
 import {setKaFilter} from '../actions/get_steps.js';
+import {setPgFilter} from '../actions/get_steps.js';
 import App from '../../client/App.js';
 
 // create function that manipulates state.steps data and
@@ -20,7 +21,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onGetSteps: () => dispatch(getSteps()),
-    setNewKaFilter: (x) => dispatch(setKaFilter(x))
+    setNewKaFilter: (x) => dispatch(setKaFilter(x)),
+    setNewPgFiler: (y) => dispatch(setPgFilter(y))
   };
 }
 

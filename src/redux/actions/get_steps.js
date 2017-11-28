@@ -43,6 +43,13 @@ export function setKaFilter(kaFilter){
 	}
 }
 
+export function setPgFilter(pgFilter){
+	return {
+		type: 'SET_PG_FILTER',
+		pgFilter
+	}
+}
+
 
 
 
