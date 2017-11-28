@@ -58,8 +58,7 @@ class App extends Component {
               
                 return (
                   <li key={index}>
-                    {data.process_group}
-                    {data.knowledge_area}
+                    
                     {data.data}
                   </li>
                 );
