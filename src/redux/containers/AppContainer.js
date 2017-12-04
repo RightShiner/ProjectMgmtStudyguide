@@ -14,7 +14,7 @@ function filterSteps (steps, pgFilter, kaFilter){
 
 function mapStateToProps(state) {
   return {
-    steps : state.steps.datagroups
+    steps : state.steps.stepgroups
   };
 }
 
