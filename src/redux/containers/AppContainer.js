@@ -8,13 +8,20 @@ import App from '../../client/App.js';
 // passes that data to App
 
 function filterSteps (steps, pgFilter, kaFilter){
-	 return steps;
+	var i, stepObject;
+	for( i = 0; i < steps.length; i++){
+		for( stepObject in steps[i]){
+			return steps[i][stepObject]
+		}
+	}
 }
 
 
 function mapStateToProps(state) {
   return {
+    // steps : filterSteps(state.steps.stepgroups, state.pgFilter,state.kaFilter)
     steps : state.steps.stepgroups
+
   };
 }
 
