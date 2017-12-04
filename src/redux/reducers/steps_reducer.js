@@ -16,14 +16,14 @@ export function stepsReducer(state = {}, action) {
     }
 
     case 'GET_STEPS_FULFILLED': {
-      const {datagroups} = action.steps.steps;
+      const {datastepgroups} = action.steps.steps;
       const newState = Object.assign({}, state, {
         inProgress: false,
         success: 'Got steps.'
       });
-      newState.datagroups = [];
-      if (datagroups) {
-        newState.datagroups = Object.keys(datagroups).map(k => datagroups[k]);
+      newState.stepgroups = [];
+      if (datastepgroups) {
+        newState.stepgroups = Object.keys(datastepgroups).map(k => datastepgroups[k]);
       }
       return newState;
     }
