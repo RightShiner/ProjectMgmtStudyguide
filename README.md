@@ -1,7 +1,7 @@
  # Project Mgmt Studyguide
    - An app to help learn process groups
 
- ## Nov 7, 2017
+ ## Nov 7, Dec 3 2017
  ## [David Eliason](http://www.davethemaker.com)
 
 ---
