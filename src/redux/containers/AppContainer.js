@@ -7,13 +7,18 @@ import App from '../../client/App.js';
 // create function that manipulates state.steps data and
 // passes that data to App
 
-function filterSteps (steps, pgFilter, kaFilter){
-	var i, stepObject;
-	for( i = 0; i < steps.length; i++){
-		for( stepObject in steps[i]){
-			return steps[i][stepObject]
-		}
-	}
+function pGkAFiltered (){
+	
+}
+
+function pgFiltered(steps,pgFilter){
+   for(const prop in steps){
+   	return steps[prop] === pgFilter
+   }
+}
+
+function kAFiltered(steps,kaFilter){
+
 }
 
 // ********** it's not recognizing state.steps.stepgroups in above function for looping through 
@@ -21,9 +26,8 @@ function filterSteps (steps, pgFilter, kaFilter){
 function mapStateToProps(state) {
   return {
     // steps : filterSteps(state.steps.stepgroups, state.pgFilter,state.kaFilter)
-    steps : state.steps.stepgroups
-
-  };
+    steps : pgFiltered(state.steps.stepgroups,state.pgFilter)
+  }
 }
 
 function mapDispatchToProps(dispatch) {

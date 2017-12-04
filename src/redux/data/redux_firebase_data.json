@@ -1,7 +1,7 @@
 {
 		"steps": {
 			"process_group1" : {
-		 		 "process group" :"Initiating",
+		 		 "process_group" :"Initiating",
 				 "knowledge_area" : "Project Integration Management",
 			 	 "data" : "Develop Project Charter"
 			          },
