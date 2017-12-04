@@ -16,6 +16,7 @@ function filterSteps (steps, pgFilter, kaFilter){
 	}
 }
 
+// ********** it's not recognizing state.steps.stepgroups in above function for looping through 
 
 function mapStateToProps(state) {
   return {
