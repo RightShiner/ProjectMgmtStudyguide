@@ -33,8 +33,6 @@ class App extends Component {
 
 	   componentDidMount() {
     		this.props.onGetSteps();
-        this.props.setNewKaFilter('hi');
-        this.props.setNewPgFiler('there');
     		}
 
   render() {
