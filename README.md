@@ -1,14 +1,16 @@
- Project Mgmt Studyguide
- app to help learn process groups
+ # Project Mgmt Studyguide
+   - An app to help learn process groups
 
- #Nov 7, 2017
- ## David Eliason
+ ## Nov 7, 2017
+ ## [David Eliason](http://www.davethemaker.com)
 
-Objective
+---
+
+### Objective
 
 This app is an exercise in building a React app the 'right way', by following the recipe suggested by the Redux team in the article "Usage With React". That, in turn, references an article by the React team in the article "Thinking In React." 
 
-Steps Taken
+### Steps Taken
 
 First, started with a mockup, then broke the UI into a component hierarchy. With the React team's suggestion of building a non-state, non-dynamic app first, I then built out a version that used only props.
 
@@ -29,5 +31,5 @@ The biggest challenges that I found were twofold:
 My subsequent approach was to create two new reducers to allow for state to hold the process_group and knowledge_area values. Then, in the main steps reducer I can access those values for filtering outputted data
 
 
-The Result
+### The Result
 
