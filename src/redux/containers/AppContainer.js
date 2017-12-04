@@ -16,7 +16,7 @@ function kaFilterThis(state){
 function mapStateToProps(state) {
   return {
     // steps : filterSteps(state.steps.stepgroups, state.pgFilter,state.kaFilter)
-    steps : state.steps.stepgroups
+    steps : state.steps
     // kaFiltered : kaFilterThis(state.steps.stepgroups)
   }
 }

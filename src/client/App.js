@@ -54,9 +54,9 @@ class App extends Component {
         
 
          <div>
-         	{this.props.steps && this.props.steps.length > 0 ? (
+         	{this.props.steps.stepgroups && this.props.steps.stepgroups.length > 0 ? (
             <ul>
-              {this.props.steps.map((data, index) => {
+              {this.props.steps.stepgroups.map((data, index) => {
                 return (
                   <li key={index}>
                     {data.data}
