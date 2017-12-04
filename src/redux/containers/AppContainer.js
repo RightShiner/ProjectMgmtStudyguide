@@ -4,29 +4,17 @@ import {setKaFilter} from '../actions/get_steps.js';
 import {setPgFilter} from '../actions/get_steps.js';
 import App from '../../client/App.js';
 
-// create function that manipulates state.steps data and
-// passes that data to App
-
-function pGkAFiltered (){
-	
+function kaFilterThis(state,filter){
+    for(const prop in state){
+      return state[prop] === filter
+    }
 }
-
-function pgFiltered(steps,pgFilter){
-   for(const prop in steps){
-   	return steps[prop] === pgFilter
-   }
-}
-
-function kAFiltered(steps,kaFilter){
-
-}
-
-// ********** it's not recognizing state.steps.stepgroups in above function for looping through 
 
 function mapStateToProps(state) {
   return {
     // steps : filterSteps(state.steps.stepgroups, state.pgFilter,state.kaFilter)
-    steps : pgFiltered(state.steps.stepgroups,state.pgFilter)
+    steps : state.steps.stepgroups,
+    kaFiltered : kaFilterThis(state.steps.stepgroups,state.kaFilter)
   }
 }
 

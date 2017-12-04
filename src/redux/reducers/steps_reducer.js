@@ -22,13 +22,25 @@ export function stepsReducer(state = {}, action) {
         success: 'Got steps.'
       });
       newState.stepgroups = [];
+      // newState.kafiltered = [];
+
       if (steps) {
         newState.stepgroups = Object.keys(steps).map(k => steps[k]);
+        // newState.kafiltered = Object.keys(newState.stepgroups).map(k => newState.stepgroups[k] ===)
       }
       return newState;
     }
 
+    // case 'GET_KA_FILTERED': {
+    //   const newKaState = Object.assign({},state,{});
+    //   newKaState.kafiltered = [];
+
+    // }
+
     default:
       return state;
   }
+
+
+
 }
