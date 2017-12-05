@@ -31,11 +31,9 @@ export function stepsReducer(state = {}, action) {
       return newState;
     }
 
-    // case 'GET_KA_FILTERED': {
-    //   const newKaState = Object.assign({},state,{});
-    //   newKaState.kafiltered = [];
-
-    // }
+    case 'FILTER_STEPS': {
+      return Object.assign({}, state.steps);
+    }
 
     default:
       return state;

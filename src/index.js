@@ -12,7 +12,7 @@ import {setKaFilter} from './redux/actions/get_steps.js';
 
 const logger = createLogger();
 const store = createStore(rootReducer,{},applyMiddleware(thunk,logger));
-store.dispatch(setKaFilter('test')) // works
+store.dispatch({type:'FILTER_STEPS',pgFilter:'blue'});
 console.log(store.getState());
 
 ReactDOM.render(<Provider store={store}>
