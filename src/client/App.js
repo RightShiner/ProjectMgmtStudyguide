@@ -67,19 +67,6 @@ class App extends Component {
           ) : null}
          </div>
 
-          <div>
-          {this.props.kaFiltered && this.props.kaFiltered.length > 0 ? (
-            <ul>
-              {this.props.kaFiltered.map((data, index) => {
-                return (
-                  <li key={index}>
-                    {data.data}
-                  </li>
-                );
-              })}
-            </ul>
-          ) : null}
-         </div>
       </div>
     );
   }
